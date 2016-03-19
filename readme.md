@@ -42,3 +42,41 @@ http://ionicframework.com/docs/api/service/$ionicPlatform/
 -------------------------CUSTOM URL WORKING
 
 
+#primera prueba con un link generado por marketing
+https://bnc.lt/Wwzm/tgDTdTJsSr
+resultado: abre el chrome, visita branch por detras y rerdirige a play store (aun no muestra opciones para abrir con la aplicacion)
+
+
+-----------------------ENABLING APP LINK ON CORDOVA PARA ANDROID
+
+https://dev.branch.io/getting-started/universal-app-links/guide/cordova/
+
+generate signing certificate fingerprint
+
+
+una prueba primero con un fingerprint y usando otro para generarl el apk a ver que pasa
+
+
+    <branch-config>
+        <android-prefix value="/Wwzm" />
+        <host name="bnc.lt" scheme="https" />
+    </branch-config>
+    justo antes del widget tag
+</widget>
+
+no importa que fuera un fingerprint distinto , almenos usando ionic run android funciona, no se si cuando se haga el deploy a play store esto pudiera tener alguna consecuencia y se deberia usaar el mismo firngerprint con que se firmo el apk
+
+--revisaar si se puede jugar con el nombre en vez de 
+    <branch-config>
+        <android-prefix value="/k2" />
+        <host name="kykelyn2.com" scheme="https" />
+    </branch-config>
+
+    resta: si funciona cuando abro este enlace, me dice open with y me muestra la app
+    https://kykelyn2.com/k2
+    que pasa que pierdo el trabajo por detras que me redirige al sitio web y despues al play sotre para descargar, aunque como workaround ahi me podria dirigir al sitio web y ya, si no tengo la app
+    
+
+
+
+
